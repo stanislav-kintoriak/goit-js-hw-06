@@ -16,10 +16,8 @@ const images = [
 const listOfLi = images
   .map(
     image =>
-      '<li class = "gallery__item"><img class = "gallery__image" src = `${image.url}` alt = `${image.alt}` width = "700"></li>'
+      `<li class = "gallery__item"><img class = "gallery__image" src = "${image.url}" alt = "${image.alt}" width = "700"></li>`
   )
   .join('');
-
-console.log(listOfLi);
 
 document.querySelector('.gallery').insertAdjacentHTML('afterbegin', listOfLi);
